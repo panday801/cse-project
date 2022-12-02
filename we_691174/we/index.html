@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>We Session Flex + Position</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .name > img {
+        height: 75px;
+      }
+      #log {
+        border: 1px solid red;
+        padding: 0px 5px 0px 5px;
+        border-radius: 10px;
+        height: 55px;
+        margin: auto;
+
+        text-align: center;
+      }
+      #log > h3 {
+        justify-content: center;
+        align-items: center;
+      }
+      .other {
+        display: flex;
+        gap: 45px;
+      }
+
+      .other > div:hover {
+        color: red;
+        border-bottom: 1px solid red;
+        cursor: pointer;
+      }
+/* ******************************* */
+    .card {
+      width: 300px;
+      border: 1px solid rgb(224, 224, 224);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 400px;
+    }
+
+    .footer {
+      border-top: 1px solid black;
+    }
+
+    h3,
+    p {
+      margin: 5px 0px;
+    }
+
+    .box-img {
+      width: 100%;
+    }
+  </style>
+  <style>
+    .container {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    .box-img {
+      position: relative;
+    }
+    .box-img > p {
+      background-color: grey;
+      /* width:70px; */
+      position: absolute;
+      bottom: 15px;
+      font-size: 18px;
+    }
+    .card {
+      margin-bottom: 20px;
+    }
+    #next {
+      background-color: grey;
+      /* width:70px; */
+      position: absolute;
+      bottom: 15px;
+      font-size: 18px;
+      right: 20px;
+    }
+    #bich {
+      width: 98%;
+      height: auto;
+      /* border:1px solid; */
+      display: flex;
+    }
+    #bich > div {
+      /* border:1px solid; */
+      border-color: white white white white;
+
+      margin-left: 10px;
+      /* height:0px; */
+      /* margin-top:0px; */
+      /* height:17px; */
+    }
+    #bich > div > p {
+      /* margin:3px auto 0px auto; */
+      padding-top: 3px;
+      text-decoration-line: line-through;
+      margin: auto;
+      margin-top: 3.5px;
+      color: grey;
+    }
+    .off {
+      margin-left: 5px;
+      color: rgb(102, 166, 6);
+    }
+    .offo {
+      margin-left: 5px;
+      color: orange;
+    }
+    .offoo {
+      margin-left: 5px;
+      color: rgb(246, 126, 146);
+    }
+    .colo {
+      color: grey;
+    }
+    @media all and (min-width: 750px) and (max-width: 1000px) {
+        .head {
+          white-space: nowrap;
+          overflow: scroll;
+          gap: 20px;
+        }
+        ::-webkit-scrollbar {
+          display: none;
+        }
+      }
+      @media all and (min-width: 451px) and (max-width: 750px) {
+        .head {
+          white-space: nowrap;
+          overflow: scroll;
+          gap: 20px;
+        }
+        ::-webkit-scrollbar {
+          display: none;
+        }
+      }
+      
+  </style>
+
+  <body>
+    <div class="head">
+      <div class="name">
+        <img
+          src="https://i.pinimg.com/originals/d2/17/f1/d217f1b6184ad205cab23a8890879fa2.jpg"
+          alt="pic"
+        />
+      </div>
+      <div>
+        <input
+          style="width: 250px; height: 25px"
+          type="text"
+          placeholder="Search Hotels"
+        />
+        <button
+          style="
+            height: 30px;
+            color: red;
+            border: 1px solid red;
+            background-color: white;
+          "
+        >
+          Search
+        </button>
+      </div>
+      <div class="other">
+        <div><h3>Mens</h3></div>
+        <div><h3>Womens</h3></div>
+        <div><h3>kids</h3></div>
+        <div><h3>Contact</h3></div>
+
+        <div id="log"><h3>Log in</h3></div>
+      </div>
+    </div>
+    <!-- ********************************************************* -->
+    <div class="container">
+      <div class="card">
+        <div class="box-img">
+          <img
+            src="https://raw.githubusercontent.com/Sourav12061999/nykaafashion/main/nykaa-clone/Kids%20Page/Images/img1.jpg"
+            alt=""
+            class="card-img"
+          />
+          <p>Bestseller</p>
+          <p id="next">OFFER</p>
+        </div>
+        <h3 class="card-heading">Kids Garments</h3>
+        <p class="card-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque,
+          nulla.
+        </p>
+        <div id="bich">
+          <h3>$152</h3>
+          <div>
+            <p>$50</p>
+          </div>
+          <h3 class="off">40% OFF</h3>
+        </div>
+        <p class="colo">1-2 years,3-4 years,5-9 years,10-13 years....</p>
+        <div style="display: flex;margin-top: 10px;">
+          <button style="width:50%;padding: 4px 0px 4px 0px;">Buy</button>
+          <button style="width:50%">Add to cart</button>
+        </div>
+        
+      </div>
+      
+      <div class="card">
+        <div class="box-img">
+          <img
+            src="https://img.faballey.com/images/Product/ISK00743Z/1.jpg"
+            alt=""
+            class="card-img"
+          />
+          <p>Bestseller</p>
+          <p id="next">OFFER</p>
+        </div>
+        <h3 class="card-heading">Womens Garments</h3>
+        <p class="card-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque,
+          nulla.
+        </p>
+        <div id="bich">
+          <h3>$152</h3>
+          <div>
+            <p>$50</p>
+          </div>
+          <h3 class="offo">40% OFF</h3>
+        </div>
+        <p class="colo">1-2 years,3-4 years,5-9 years,10-13 years....</p>
+        <div style="display: flex;margin-top: 10px;">
+          <button style="width:50%;padding: 4px 0px 4px 0px;">Buy</button>
+          <button style="width:50%">Add to cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="box-img">
+          <img
+            src="https://images.pexels.com/photos/1620760/pexels-photo-1620760.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt=""
+            class="card-img"
+          />
+          <p>Bestseller</p>
+          <p id="next">OFFER</p>
+        </div>
+        <h3 class="card-heading">Kids Garments</h3>
+        <p class="card-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque,
+          nulla.
+        </p>
+        <div id="bich">
+          <h3>$152</h3>
+          <div>
+            <p>$50</p>
+          </div>
+          <h3 class="offoo">40% OFF</h3>
+        </div>
+        <p class="colo">1-2 years,3-4 years,5-9 years,10-13 years....</p>
+        <div style="display: flex;margin-top: 10px;">
+          <button style="width:50%;padding: 4px 0px 4px 0px;">Buy</button>
+          <button style="width:50%">Add to cart</button>
+        </div>
+      </div>
+
+
+      <!-- ******************************************************************** -->
+
+
+      <!-- <div class="container"> -->
+        <div class="card">
+          <div class="box-img">
+            <img
+              src="https://m.media-amazon.com/images/I/61nfmEuNZnL._UY550_.jpg"
+              alt=""
+              class="card-img"
+            />
+            <p>Bestseller</p>
+            <p id="next">OFFER</p>
+          </div>
+          <h3 class="card-heading">Womens Garments</h3>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque,
+            nulla.
+          </p>
+          <div id="bich">
+            <h3>$152</h3>
+            <div>
+              <p>$50</p>
+            </div>
+            <h3 class="off">40% OFF</h3>
+          </div>
+          <p class="colo">1-2 years,3-4 years,5-9 years,10-13 years....</p>
+          <div style="display: flex;margin-top: 10px;">
+            <button style="width:50%;padding: 4px 0px 4px 0px;">Buy</button>
+            <button style="width:50%">Add to cart</button>
+          </div>
+          
+        </div>
+        
+        <div class="card">
+          <div class="box-img">
+            <img
+              src="https://fcity.in/images/products/107704441/n5cag_512.jpg"
+              alt=""
+              class="card-img"
+            />
+            <p>Bestseller</p>
+            <p id="next">OFFER</p>
+          </div>
+          <h3 class="card-heading">Womens Garments</h3>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque,
+            nulla.
+          </p>
+          <div id="bich">
+            <h3>$152</h3>
+            <div>
+              <p>$50</p>
+            </div>
+            <h3 class="offo">40% OFF</h3>
+          </div>
+          <p class="colo">1-2 years,3-4 years,5-9 years,10-13 years....</p>
+          <div style="display: flex;margin-top: 10px;">
+            <button style="width:50%;padding: 4px 0px 4px 0px;">Buy</button>
+            <button style="width:50%">Add to cart</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box-img">
+            <img
+              src="https://i.pinimg.com/474x/f5/b7/c9/f5b7c9cb18e1e7a3875ea179c1dc0c95.jpg"
+              alt=""
+              class="card-img"
+            />
+            <p>Bestseller</p>
+            <p id="next">OFFER</p>
+          </div>
+          <h3 class="card-heading">Mens Garments</h3>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque,
+            nulla.
+          </p>
+          <div id="bich">
+            <h3>$152</h3>
+            <div>
+              <p>$50</p>
+            </div>
+            <h3 class="offo">40% OFF</h3>
+          </div>
+          <p class="colo">1-2 years,3-4 years,5-9 years,10-13 years....</p>
+          <div style="display: flex;margin-top: 10px;">
+            <button style="width:50%;padding: 4px 0px 4px 0px;">Buy</button>
+            <button style="width:50%">Add to cart</button>
+          </div>
+        </div>
+        <!-- </div> -->
+  
+        <!-- <div id="footer">
+          <div>
+            <img
+              src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-512.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="data:image/png;base64,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"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://w7.pngwing.com/pngs/672/164/png-transparent-whatsapp-icon-whatsapp-logo-computer-icons-zubees-halal-foods-whatsapp-text-circle-unified-payments-interface-thumbnail.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div id="follow">
+          <h1 style="text-align: center; color: grey">Follow Us</h1>
+        </div> -->
+
+
+
+      
+      <!-- <div class="card">
+            <div class="box-img">
+                <img src="https://raw.githubusercontent.com/Sourav12061999/nykaafashion/main/nykaa-clone/Kids%20Page/Images/img1.jpg"
+                    alt="" class="card-img">
+                <p>Bestseller</p>
+            </div>
+            <h3 class="card-heading">Kids Garments</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nulla. </p>
+        </div>
+        <div class="card">
+            <div class="box-img">
+                <img src="https://raw.githubusercontent.com/Sourav12061999/nykaafashion/main/nykaa-clone/Kids%20Page/Images/img1.jpg"
+                    alt="" class="card-img">
+                <p>Bestseller</p>
+            </div>
+            <h3 class="card-heading">Kids Garments</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nulla. </p>
+        </div>
+        <div class="card">
+            <div class="box-img">
+                <img src="https://raw.githubusercontent.com/Sourav12061999/nykaafashion/main/nykaa-clone/Kids%20Page/Images/img1.jpg"
+                    alt="" class="card-img">
+                <p>Bestseller</p>
+            </div>
+            <h3 class="card-heading">Kids Garments</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nulla. </p>
+        </div> -->
+    
+  </body>
+</html>
